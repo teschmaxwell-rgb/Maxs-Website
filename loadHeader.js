@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("/Maxs-Header/header.html")
+    fetch("/Maxs-Website/header.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("header").innerHTML = data;
