@@ -97,19 +97,49 @@ body {
 }
 
 .project-tile {
-  background-color: #D3D3D3;
+  background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
-  text-align: center;
   padding: 16px;
-  text-decoration: none;
-  color: #333;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position:relative
+}
+.project-header{
+  margin-bottom: 21px;
+  position: relative;
+}
+
+.project-date {
+  position: absolute;
+  top:0;
+  right: 0;
+  font-size: 0.75rem;
+  color:#aaa;
+
+}
+.project-title{
+font-size: 1.2rem;
+margin: 0;
+padding-bottom: 6px;
+border-bottom: 2px solid #ddd;
+display: inline-block;
+}
+
+.project-tags{
+  margin-top: 8px;
+}
+.tag{
+  background-color: #007acc;
+  color: white;
+  padding: 4px 10px;
+  margin-right: 6px;
+  border-radius: 999px;
+  font-size: 0.8rem;
 }
 
 .project-tile:hover {
@@ -121,6 +151,7 @@ body {
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
+  margin-top: auto;
 }
 
 .project-tile h3 {
