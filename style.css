@@ -227,13 +227,3 @@ display: inline-block;
 .dropdown.open .dropdown-menu { display: block; } /* visible when open */
 
 /* ---- Small screens ---- */
-@media (max-width: 720px) {
-  .menu { gap: 16px; } /* tighter spacing */
-  .dropdown-menu { left: 0; transform: none; } /* align left for narrow screens */
-}
-
-/* ---- Motion respect ---- */
-@media (prefers-reduced-motion: no-preference) {
-  .dropdown-menu { transition: opacity 120ms ease, transform 120ms ease; } /* subtle animation */
-  .dropdown.open .dropdown-menu { opacity: 1; }
-}
