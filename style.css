@@ -158,3 +158,82 @@ display: inline-block;
   margin: 10px 0 0;
   font-size: 1.1em;
 }
+
+/*Header and Nav Bar */
+
+/* ---- Header / Nav base ---- */
+.site-header { /* wraps the nav */
+  background: #fff; /* clean white bar */
+  border-bottom: 1px solid #e9e9e9; /* subtle divider */
+  position: sticky; top: 0; z-index: 100; /* optional: stick to top */
+}
+
+.nav { /* centers the menu block */
+  max-width: 1100px; /* comfortable width */
+  margin: 0 auto; /* center horizontally */
+  padding: 10px 16px; /* breathing room */
+}
+
+.menu { /* the row of dropdowns */
+  list-style: none; /* remove bullets */
+  display: flex; /* row */
+  justify-content: center; /* centered in the bar */
+  align-items: center; /* vertical align */
+  gap: 28px; /* space between dropdowns */
+  margin: 0; /* reset */
+  padding: 6px 0; /* spacing */
+}
+
+/* ---- Buttons ---- */
+.dropbtn { /* the clickable label */
+  background: transparent; /* flat look */
+  border: 0; /* no border */
+  font: inherit; /* match site font */
+  padding: 8px 10px; /* hit area */
+  border-radius: 8px; /* soft corners */
+  color: #222; /* text color */
+  cursor: pointer; /* pointer cursor */
+}
+.dropbtn:hover, .dropbtn[aria-expanded="true"] { /* hover/active state */
+  background: #f2f4f7; /* subtle hover fill */
+}
+
+/* ---- Dropdown panel ---- */
+.dropdown { position: relative; } /* anchor for absolute panel */
+
+.dropdown-menu { /* the panel itself */
+  position: absolute; /* overlay below button */
+  top: calc(100% + 8px); /* just under the button */
+  left: 50%; transform: translateX(-50%); /* centered under button */
+  min-width: 220px; /* consistent width */
+  background: #fff; /* white panel */
+  border: 1px solid #e5e7eb; /* soft border */
+  border-radius: 12px; /* rounded corners */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* modern shadow */
+  padding: 8px; /* inner spacing */
+  display: none; /* hidden by default */
+}
+
+.dropdown-menu a { /* items */
+  display: block; /* full-width click target */
+  padding: 10px 12px; /* spacing */
+  text-decoration: none; /* no underline */
+  color: #111; /* text color */
+  border-radius: 8px; /* pill-ish hover */
+}
+.dropdown-menu a:hover { background: #f2f4f7; } /* hover highlight */
+
+/* ---- Show/Hide class ---- */
+.dropdown.open .dropdown-menu { display: block; } /* visible when open */
+
+/* ---- Small screens ---- */
+@media (max-width: 720px) {
+  .menu { gap: 16px; } /* tighter spacing */
+  .dropdown-menu { left: 0; transform: none; } /* align left for narrow screens */
+}
+
+/* ---- Motion respect ---- */
+@media (prefers-reduced-motion: no-preference) {
+  .dropdown-menu { transition: opacity 120ms ease, transform 120ms ease; } /* subtle animation */
+  .dropdown.open .dropdown-menu { opacity: 1; }
+}
