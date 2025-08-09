@@ -191,7 +191,7 @@ display: inline-block;
   font: inherit; /* match site font */
   padding: 8px 10px; /* hit area */
   border-radius: 8px; /* soft corners */
-  color: #222; /* text color */
+  color: #ffffff; /* text color */
   cursor: pointer; /* pointer cursor */
 }
 .dropbtn:hover, .dropbtn[aria-expanded="true"] { /* hover/active state */
