@@ -1,5 +1,20 @@
 <header>
     <nav class="navbar">
-    <a href="/Maxs-Website/index.html">Home</a>
-    </nav>
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="logo" href="index.html">My Website</a>
+
+    <!-- Toggle button for mobile -->
+    <button class="toggle-btn" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      ☰
+    </button>
+
+    <!-- Navigation links -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </div>
+</nav>
 </header>
